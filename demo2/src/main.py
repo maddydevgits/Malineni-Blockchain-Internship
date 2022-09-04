@@ -15,7 +15,7 @@ with open('../build/contracts/demo2.json') as f:
     contract_abi=contract_json['abi']
 
 contract=web3.eth.contract(address=caddr,abi=contract_abi)
-k=input('enter a message')
+k=input('enter a message to store')
 tx_hash=contract.functions.insertmessage(k).transact()
 web3.eth.waitForTransactionReceipt(tx_hash)
 
