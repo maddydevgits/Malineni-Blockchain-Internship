@@ -1,0 +1,13 @@
+pragma solidity 0.8.13;
+
+contract dyhelloworld{
+    string s;
+    function sample1(string memory a) public {
+     s=a;
+
+    }
+    function sample2() public view  returns(string memory){
+        return s;
+
+    }
+}
