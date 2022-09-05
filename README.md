@@ -75,7 +75,7 @@ This programme is for Malineni Engineering College, Guntur on Blockchain
   </tr>
   <tr>
     <td>9. </td>
-    <td>Book Hotel Rooms using Blockchain</td>
+    <td>Book Hotel Rooms</td>
     <td>Book a 5-star Hotel Rooms for a customer using Blockchain</td>
     <td></td>
   </tr>
