@@ -57,7 +57,7 @@ This programme is for Malineni Engineering College, Guntur on Blockchain
   </tr>
   <tr>
     <td>6. </td>
-    <td>Land Registration using Blockchain </td>
+    <td>Land Registration </td>
     <td>Store land registration data in Blockchain and make it immutable </td>
     <td></td>
   </tr>
