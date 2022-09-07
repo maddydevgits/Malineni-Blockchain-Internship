@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Holiday Crown | Book Hotel Rooms using Blockchain</title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:300,500,800|Old+Standard+TT' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:300,500,800' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/bootstrap/css/bootstrap.min.css')}}" />
+
+<!-- uniform -->
+<link type="text/css" rel="stylesheet" href="{{url_for('static',filename='assets/uniform/css/uniform.default.min.css')}}" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/wow/animate.css')}}" />
+
+
+<!-- gallery -->
+<link rel="stylesheet" href="{{url_for('static',filename='assets/gallery/blueimp-gallery.min.css')}}">
+
+
+<!-- favicon -->
+<link rel="shortcut icon" href="{{url_for('static',filename='images/favicon.png')}}" type="image/x-icon">
+<link rel="icon" href="{{url_for('static',filename='images/favicon.png')}}" type="image/x-icon">
+
+<link rel="stylesheet" href="{{url_for('static',filename='assets/style.css')}}">
+
+</head>
+
+<body id="home">
+
+
+<!-- top 
+  <form class="navbar-form navbar-left newsletter" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Enter Your Email Id Here">
+        </div>
+        <button type="submit" class="btn btn-inverse">Subscribe</button>
+    </form>
+ top -->
+
+<!-- header -->
+<nav class="navbar  navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="{{url_for('static',filename='images/logo.png')}}"  alt="holiday crown"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav">        
+        <li><a href="/">Home </a></li>
+        <li><a href="/rooms-tariff">Rooms & Tariff</a></li>        
+        <li><a href="/introduction">Introduction</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div><!-- Wnavbar-collapse -->
+  </div><!-- container-fluid -->
+</nav>
+<!-- header -->
+
+
+
+
+<!-- banner -->
+<div class="banner">    	   
+    <img src="{{url_for('static',filename='images/photos/banner.jpg')}}"  class="img-responsive" alt="slide">
+    <div class="welcome-message">
+        <div class="wrap-info">
+            <div class="information">
+                <h1  class="animated fadeInDown">Book Hotel Rooms using Blockchain</h1>
+                <p class="animated fadeInUp">Most luxurious hotel of asia with the royal treatments and excellent customer service.</p>                
+            </div>
+            <a href="#information" class="arrow-nav scroll wowload fadeInDownBig"><i class="fa fa-angle-down"></i></a>
+        </div>
+    </div>
+</div>
+<!-- banner-->
+
+
+<!-- reservation-information -->
+<div id="information" class="spacer reserve-info ">
+<div class="container">
+<div class="row">
+<div class="col-sm-7 col-md-8">
+    <div class="embed-responsive embed-responsive-16by9 wowload fadeInLeft"><iframe  class="embed-responsive-item" src="//player.vimeo.com/video/55057393?title=0" width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+</div>
+<div class="col-sm-5 col-md-4">
+<h3>Reservation</h3>
+    <form class="wowload fadeInRight" action="/bookRoom" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="wallet address" name="walletaddr">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control"  placeholder="Name" name="name">
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control"  placeholder="Email" name="email">
+        </div>
+        <div class="form-group">
+            <input type="Phone" class="form-control"  placeholder="Phone" name="phone">
+        </div>        
+        <div class="form-group">
+            <div class="row">
+            <div class="col-xs-6">
+            <select class="form-control" name="rooms">
+              <option>No. of Rooms</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            </div>        
+            <div class="col-xs-6">
+            <select class="form-control" name="adults">
+              <option>No. of Adult</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            </div></div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+            <div class="col-xs-4">
+              <select class="form-control col-sm-2" id="expiry-month" name="date">
+                <option>Date</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+            </div>
+            <div class="col-xs-4">
+              <select class="form-control col-sm-2" id="expiry-month" name="month">
+                <option>Month</option>
+                <option value="01">Jan (01)</option>
+                <option value="02">Feb (02)</option>
+                <option value="03">Mar (03)</option>
+                <option value="04">Apr (04)</option>
+                <option value="05">May (05)</option>
+                <option value="06">June (06)</option>
+                <option value="07">July (07)</option>
+                <option value="08">Aug (08)</option>
+                <option value="09">Sep (09)</option>
+                <option value="10">Oct (10)</option>
+                <option value="11">Nov (11)</option>
+                <option value="12">Dec (12)</option>
+              </select>
+            </div>
+            <div class="col-xs-4">
+              <select class="form-control" name="year">
+                <option value="22">2022</option>
+                <option value="23">2023</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control"  placeholder="Message" rows="3" name="message"></textarea>
+        </div>
+        <button class="btn btn-default">Submit</button>
+    </form>    
+</div>
+</div>  
+</div>
+</div>
+<!-- reservation-information -->
+
+
+
+<!-- services -->
+<div class="spacer services wowload fadeInUp">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <!-- RoomCarousel -->
+            <div id="RoomCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="item active"><img src="{{url_for('static',filename='images/photos/8.jpg')}}" class="img-responsive" alt="slide"></div>                
+                <div class="item  height-full"><img src="{{url_for('static',filename='images/photos/9.jpg')}}"  class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="{{url_for('static',filename='images/photos/10.jpg')}}"  class="img-responsive" alt="slide"></div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#RoomCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                <a class="right carousel-control" href="#RoomCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+            </div>
+            <!-- RoomCarousel-->
+            <div class="caption">Rooms<a href="rooms-tariff.html" class="pull-right"><i class="fa fa-edit"></i></a></div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <!-- RoomCarousel -->
+            <div id="TourCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="item active"><img src="{{url_for('static',filename='images/photos/6.jpg')}}" class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="{{url_for('static',filename='images/photos/3.jpg')}}"  class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="{{url_for('static',filename='images/photos/4.jpg')}}"  class="img-responsive" alt="slide"></div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#TourCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                <a class="right carousel-control" href="#TourCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+            </div>
+            <!-- RoomCarousel-->
+            <div class="caption">Tour Packages<a href="gallery.php" class="pull-right"><i class="fa fa-edit"></i></a></div>
+        </div>
+
+
+        <div class="col-sm-4">
+            <!-- RoomCarousel -->
+            <div id="FoodCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="item active"><img src="{{url_for('static',filename='images/photos/1.jpg')}}" class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="{{url_for('static',filename='images/photos/2.jpg')}}"  class="img-responsive" alt="slide"></div>
+                <div class="item  height-full"><img src="{{url_for('static',filename='images/photos/5.jpg')}}"  class="img-responsive" alt="slide"></div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#FoodCarousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                <a class="right carousel-control" href="#FoodCarousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+            </div>
+            <!-- RoomCarousel-->
+            <div class="caption">Food and Drinks<a href="gallery.php" class="pull-right"><i class="fa fa-edit"></i></a></div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- services -->
+
+
+
+
+
+
+<footer class="spacer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h4>Holiday Crown</h4>
+                    <p>Holiday Crown was these three and songs arose whose. Of in vicinity contempt together in possible branched. Assured company hastily looking garrets in oh. Most have love my gone to this so. Discovered interested prosperous the our affronting insipidity day. Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret passed. Absolute one hastened mrs any sensible. </p>
+                </div>              
+                 
+                 <div class="col-sm-3">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="rooms-tariff.php">Rooms & Tariff</a></li>        
+                        <li><a href="introduction.php">Introduction</a></li>
+                        <li><a href="gallery.php">Gallery</a></li>
+                        <li><a href="tour.php">Tour Packages</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                 <div class="col-sm-4 subscribe">
+                    <h4>Subscription</h4>
+                    <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter email id here">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Get Notify</button>
+                    </span>
+                    </div>
+                    <div class="social">
+                    <a href="#"><i class="fa fa-facebook-square" data-toggle="tooltip" data-placement="top" data-original-title="facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"  data-toggle="tooltip" data-placement="top" data-original-title="instragram"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square" data-toggle="tooltip" data-placement="top" data-original-title="twitter"></i></a>
+                    <a href="#"><i class="fa fa-pinterest-square" data-toggle="tooltip" data-placement="top" data-original-title="pinterest"></i></a>
+                    <a href="#"><i class="fa fa-tumblr-square" data-toggle="tooltip" data-placement="top" data-original-title="tumblr"></i></a>
+                    <a href="#"><i class="fa fa-youtube-square" data-toggle="tooltip" data-placement="top" data-original-title="youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container-->    
+    
+    <!--/.footer-bottom--> 
+</footer>
+
+<div class="text-center copyright">Powered by <a href="http://thebootstrapthemes.com">thebootstrapthemes.com</a></div>
+
+<a href="#home" class="toTop scroll"><i class="fa fa-angle-up"></i></a>
+
+
+
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title">title</h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
+</div>
+
+
+
+
+
+<script src="{{url_for('static',filename='assets/jquery.js')}}"></script>
+
+<!-- wow script -->
+<script src="{{url_for('static',filename='assets/wow/wow.min.js')}}"></script>
+
+<!-- uniform -->
+<script src="{{url_for('static',filename='assets/uniform/js/jquery.uniform.js')}}"></script>
+
+
+<!-- boostrap -->
+<script src="{{url_for('static',filename='assets/bootstrap/js/bootstrap.js')}}" type="text/javascript" ></script>
+
+<!-- jquery mobile -->
+<script src="{{url_for('static',filename='assets/mobile/touchSwipe.min.js')}}"></script>
+
+<!-- jquery mobile -->
+<script src="{{url_for('static',filename='assets/respond/respond.js')}}"></script>
+
+<!-- gallery -->
+<script src="{{url_for('static',filename='assets/gallery/jquery.blueimp-gallery.min.js')}}"></script>
+
+
+<!-- custom script -->
+<script src="{{url_for('static',filename='assets/script.js')}}"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+

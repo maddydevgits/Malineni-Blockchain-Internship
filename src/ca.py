@@ -1,0 +1,1 @@
+hotelContractAddress='0xC5cE369Ce6a0aBcBf8b3A52a49e43887E289dcc1'
