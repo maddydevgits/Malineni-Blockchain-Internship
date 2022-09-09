@@ -81,7 +81,7 @@ This programme is for Malineni Engineering College, Guntur on Blockchain
   </tr>
   <tr>
     <td>10. </td>
-    <td>Car Pooling using Blockchain</td>
+    <td>Registration Dapp using Blockchain</td>
     <td>Book your cab in car pooling technique</td>
     <td>Future Tech</td>
   </tr>
